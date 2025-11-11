@@ -43,7 +43,7 @@ then
         4) SPARKVERSION="spark4" ;;
       esac
     else
-      echo "Error: $LCG_VIEW/bin/spark-submit not found or not executable." >&2
+      _log "Error: $LCG_VIEW/bin/spark-submit not found or not executable." >&2
     fi
     HADOOPVERSION='3.3'   # Classpath compatibility for YARN
     source $SPARK_CONFIG_SCRIPT $SPARK_CLUSTER_NAME $HADOOPVERSION $SPARKVERSION
